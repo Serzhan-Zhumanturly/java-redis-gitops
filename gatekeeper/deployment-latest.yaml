@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: forbidden-latest
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: forbidden-latest
+  template:
+    metadata:
+      labels:
+        app: forbidden-latest
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          ports:
+            - containerPort: 80

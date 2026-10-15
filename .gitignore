@@ -1,0 +1,11 @@
+
+# Maven build output
+java-app/target/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Trivy report
+trivy-report.json
+java-app/effective-pom.xml
